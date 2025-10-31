@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NeoFit Studio - Membership</title>
+    <meta name="description" content="Membership plans at NeoFit Studio: Monthly, Half-Yearly, Yearly." />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* ---------- HERO / BANNER SECTION ---------- */
+        .membership-hero {
+            background-image: url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+            padding: 90px 20px 60px 20px;
+        }
+
+        .membership-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .membership-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* ---------- PLAN CARDS ---------- */
+        .plans-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .plan-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            width: 320px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .plan-price {
+            font-size: 1.2rem;
+            color: #7a00ff;
+            margin-bottom: 15px;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .plan-features li {
+            margin: 8px 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .join-btn {
+            background-color: #7a00ff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .join-btn:hover {
+            background-color: #5c00cc;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            color: #777;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="logo" href="index.html">
+                <img src="https://www.shutterstock.com/image-vector/fitness-gym-logo-icons-sport-260nw-1661439190.jpg"
+                    alt="NeoFit Studio logo">
+            </a>
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
+            <nav id="main-nav" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="membership.html" class="active">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- <section class="membership-hero"
+        style="background-image:url('https://images.pexels.com/photos/6551177/pexels-photo-6551177.jpeg?auto=center&cs=tinysrgb&w=1600');"> -->
+
+    <section class="membership-hero">
+        <h1>Membership Plans</h1>
+        <p>Choose the plan that fits your fitness journey best.</p>
+    </section>
+
+    <!-- Plans -->
+    <section class="plans-container">
+        <div class="plan-card">
+            <h2 class="plan-title">Monthly</h2>
+            <p class="plan-price">₹1,499 / month</p>
+            <ul class="plan-features">
+                <li>Unlimited gym access</li>
+                <li>2 group classes per week</li>
+                <li>Free fitness assessment</li>
+            </ul>
+            <button class="join-btn">Join Monthly</button>
+        </div>
+
+        <div class="plan-card">
+            <h2 class="plan-title">Half-Yearly</h2>
+            <p class="plan-price">₹7,999 / 6 months</p>
+            <ul class="plan-features">
+                <li>Unlimited gym access</li>
+                <li>Unlimited group classes</li>
+                <li>Personal training discount</li>
+            </ul>
+            <button class="join-btn">Join Half-Yearly</button>
+        </div>
+
+        <div class="plan-card">
+            <h2 class="plan-title">Yearly</h2>
+            <p class="plan-price">₹14,999 / year</p>
+            <ul class="plan-features">
+                <li>All benefits included</li>
+                <li>Free nutrition consult</li>
+                <li>Priority class booking</li>
+            </ul>
+            <button class="join-btn">Join Yearly</button>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>NeoFit Studio</h3>
+                <p>Address: 123 Fitness Ave, New Delhi, India</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow us</h4>
+                <ul class="social-list">
+                    <li><a href="#" aria-label="Facebook">FB</a></li>
+                    <li><a href="#" aria-label="Instagram">IG</a></li>
+                    <li><a href="#" aria-label="Twitter">TW</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            <p>© <span id="footer-year-5"></span> NeoFit Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top-5" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="js/scripts.js" defer></script>
+</body>
+
+</html>

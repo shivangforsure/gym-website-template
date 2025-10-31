@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NeoFit Studio - Contact</title>
+    <meta name="description" content="Get in touch with NeoFit Studio — address, phone, email and contact form." />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="logo" href="index.html">
+                <img src="https://www.shutterstock.com/image-vector/fitness-gym-logo-icons-sport-260nw-1661439190.jpg"
+                    alt="NeoFit Studio logo">
+            </a>
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
+            <nav id="main-nav" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container contact-page">
+        <section class="contact-grid">
+            <div class="contact-details">
+                <h1>Contact Us</h1>
+                <p>Address: 123 Fitness Ave, New Delhi, India</p>
+                <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p>Email: <a href="mailto:hello@neofitstudio.com">hello@neofitstudio.com</a></p>
+
+                <h3>Opening hours</h3>
+                <p>Mon - Sat: 5:00 AM - 11:00 PM</p>
+                <p>Sunday: 7:00 AM - 9:00 PM</p>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form id="contact-form" novalidate>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help..."
+                        required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p id="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="map container">
+            <h2>Find us</h2>
+            <div class="map-embed">
+                <!-- Simple query-based embed centered on New Delhi; replace with your exact embed if needed -->
+                <iframe src="https://www.google.com/maps?q=New+Delhi,+India&output=embed" title="Map to NeoFit Studio"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>NeoFit Studio</h3>
+                <p>Address: 123 Fitness Ave, New Delhi, India</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow us</h4>
+                <ul class="social-list">
+                    <li><a href="#" aria-label="Facebook">FB</a></li>
+                    <li><a href="#" aria-label="Instagram">IG</a></li>
+                    <li><a href="#" aria-label="Twitter">TW</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            <p>© <span id="footer-year-6"></span> NeoFit Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top-6" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="js/scripts.js" defer></script>
+</body>
+
+</html>
