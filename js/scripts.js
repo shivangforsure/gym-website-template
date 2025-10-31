@@ -219,6 +219,49 @@ function initFinalTestimonialsCarousel() {
     setTimeout(startAutoplay, 500);
 }
 
+// Animated counter for stats
+function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            el.textContent = target.toLocaleString() + '+';
+            clearInterval(timer);
+        } else {
+            el.textContent = Math.floor(current).toLocaleString();
+        }
+    }, 16);
+}
+
+// Intersection Observer for stats animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll('.stat-number');
+            counters.forEach(counter => animateCounter(counter));
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) observer.observe(statsSection);
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
 // ===== Initialize Everything =====
 document.addEventListener("DOMContentLoaded", () => {
     try { initNavToggle(); } catch (e) { console.error(e); }
